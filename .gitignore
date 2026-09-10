@@ -1,0 +1,20 @@
+# 敏感
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 项目数据
+data/chroma/
+data/parsed/
+data/pdfs/*.pdf
+
+# 系统
+.DS_Store
+.idea/
+.vscode/   # 注意：你用 VS Code，是否忽略 .vscode 看个人喜好，团队项目通常忽略

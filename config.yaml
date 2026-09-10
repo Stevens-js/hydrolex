@@ -1,0 +1,21 @@
+llm:
+  provider: "qwen"         # 如 glm / qwen / deepseek
+  model: "qwen-plus"          # 如 glm-4-plus
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"       # 云 API 的 OpenAI 兼容 endpoint
+  temperature: 0.1     # 建议 0.0~0.3，提取任务要稳
+
+embedding:
+  model_name: "text-embedding-v2"      # 如 BAAI/bge-m3
+
+vector_store:
+  persist_directory: data/chroma   # 指向 data/chroma
+  collection_name: "hydrolex_terms" # 如 hydrolex_terms
+
+paths:
+  pdf_dir: data/pdfs       # 指向 data/pdfs
+  parsed_dir: data/parsed         # 指向 data/parsed
+  seed_terms_path: data/seed_terms.xlsx    # 指向 data/seed_terms.xlsx（先不创建文件，路径占位）
+
+extraction:
+  term_chapter_keyword: "术语"  # 规范里"术语"章节的标题关键词，如 "术语和定义"
+  min_confidence: 0.5        # 候选术语最低置信度阈值，如 0.5
